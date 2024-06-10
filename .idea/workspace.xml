@@ -10,12 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d1627a84-74af-4a18-832b-8ce254c590e0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/luan/abc/demo2/db/ProductDAL.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/luan/abc/demo2/models/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/luan/abc/demo2/models/CartItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/luan/abc/demo2/servlet/ServletCart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/luan/abc/demo2/servlet/ServletHome.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/luan/abc/demo2/servlet/ServletManageCart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/cart.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/luan/abc/demo2/db/ProductDAL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/luan/abc/demo2/db/ProductDAL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/luan/abc/demo2/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/luan/abc/demo2/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -109,6 +112,24 @@
       <predefined_log_file id="Tomcat Manager" />
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="57669" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
@@ -150,7 +171,7 @@
       <updated>1717984448921</updated>
       <workItem from="1717984449995" duration="164000" />
       <workItem from="1717984627083" duration="444000" />
-      <workItem from="1718020309396" duration="2972000" />
+      <workItem from="1718020309396" duration="6738000" />
     </task>
     <servers />
   </component>

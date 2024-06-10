@@ -1,6 +1,5 @@
 package luan.abc.demo2.db;
 
-import luan.abc.demo2.models.Category;
 import luan.abc.demo2.models.Product;
 
 import java.sql.ResultSet;
@@ -28,6 +27,27 @@ public class ProductDAL extends DB {
                 products.add(product);
             }
             return products;
+        } catch (Exception e) {
+
+        }
+
+        return null;
+    }
+
+    public Product getById(int id) {
+        String sql = "SELECT * FROM products WHERE id = " + id;
+        try {
+            Statement stm = connection.createStatement();
+            ResultSet rs = stm.executeQuery(sql);
+            if (rs.next()) {
+                Product product = new Product();
+                product.setId(rs.getInt("id"));
+                product.setName(rs.getString("name"));
+                product.setPrice(rs.getFloat("price"));
+                product.setDescription(rs.getString("description"));
+                product.setPath(rs.getString("path"));
+                return product;
+            }
         } catch (Exception e) {
 
         }
