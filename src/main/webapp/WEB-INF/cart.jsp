@@ -78,7 +78,7 @@
         </div>
 
         <div class="col-6">
-            <a>Đặt hàng</a>
+            <a href="${pageContext.servletContext.contextPath}/checkout">Đặt hàng</a>
         </div>
     </div>
 </div>
