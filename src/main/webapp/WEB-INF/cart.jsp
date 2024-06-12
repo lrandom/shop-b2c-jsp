@@ -21,10 +21,7 @@
 <body>
 <div class="container">
     <div class="row">
-        <c:forEach var="cartItem" items="${list}">
-
-        </c:forEach>
-
+        <h1>Giỏ hàng</h1>
         <table class="table">
             <thead>
             <tr>
@@ -40,7 +37,9 @@
 
             <c:forEach var="cartItem" items="${list}">
                 <tr>
-                    <th scope="row">1</th>
+                    <th scope="row">
+                        <a href="${pageContext.servletContext.contextPath}/cart?command=remove&productId=${cartItem.getProduct().getId()}">Xoá</a>
+                    </th>
                     <td>
                         <img style="width: 80px;height: 50px" src="${cartItem.getProduct().getPath()}"/>
                     </td>
@@ -51,7 +50,13 @@
                         <fmt:formatNumber value="${cartItem.getProduct().getPrice()}" type="currency"/>
                     </td>
                     <td>
+                        <a href="${pageContext.servletContext.contextPath}/cart?command=update-quantity&productId=${cartItem.getProduct().getId()}&quantity=-1"
+                           style="text-decoration: none; color: black; font-size: 20px; font-weight: bold;"
+                        >-</a>
                         <input type="number" value="${cartItem.getQuantity()}"/>
+                        <a href="${pageContext.servletContext.contextPath}/cart?command=update-quantity&productId=${cartItem.getProduct().getId()}&quantity=1"
+                           style="text-decoration: none; color: black; font-size: 20px; font-weight: bold;"
+                        >+</a>
                     </td>
 
                     <td>
@@ -63,6 +68,18 @@
 
             </tbody>
         </table>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <h4>Tổng tiền hàng: <fmt:formatNumber value="${subTotal}" type="currency"/></h4>
+            <h4>Thuế: <fmt:formatNumber value="${tax}" type="currency"/></h4>
+            <h4>Tổng tiền: <fmt:formatNumber value="${total}" type="currency"/></h4>
+        </div>
+
+        <div class="col-6">
+            <a>Đặt hàng</a>
+        </div>
     </div>
 </div>
 </body>
